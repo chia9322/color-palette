@@ -1,0 +1,44 @@
+
+    {% include "header.html" %}
+
+
+    <section id="color-palette" class="white-section">
+        <div class="container-fluid">
+
+
+            <img class="upload-img" src="{{image}}">
+
+            <div class="image-select">
+                <form action="/upload-image" method="POST" enctype="multipart/form-data">
+
+                    <div class="row">
+                        <div class="col-10">
+                          <input class="form-control" type="file" name="image" id="image">
+                        </div>
+                        <div class="col-2">
+                            <button type="submit" class="btn btn-secondary">Upload</button>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+
+
+            {% for color in colors : %}
+
+
+              <div class="row color-palette">
+                  <div class="col-4 color-column" style="background-color: {{color}};">
+
+                  </div>
+                  <div class="col-8 color-code-column">
+                      <p>{{color}}</p>
+                  </div>
+              </div>
+
+
+            {% endfor %}
+        </div>
+    </section>
+
+{% include "footer.html" %}
