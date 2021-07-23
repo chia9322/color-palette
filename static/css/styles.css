@@ -18,21 +18,21 @@ body {
 }
 
 .upload-img {
-  max-width: 400px;
+  max-width: 600px;
 }
 
 .color-palette {
-  max-width: 400px;
+  max-width: 600px;
   margin: 10px auto;
 }
 
 .image-select {
-  max-width: 400px;
+  max-width: 600px;
   margin: 50px auto;
 }
 
 .color-code-column {
-  text-align: left;
+  text-align: center;
 }
 
 
@@ -57,4 +57,11 @@ body {
 
 .social-icon:hover {
   color: #dbe4df;
+}
+
+/* Query */
+@media only screen and (max-device-width: 480px) {
+  h1, h2, h3, h4, h5, h6, p, a, i {
+    font-size: 140%;
+  }
 }
